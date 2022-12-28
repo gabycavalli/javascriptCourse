@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <script>
+    /* ej 5*/
+        const invertirCadena = (cadena="")=>{
+            (!cadena)
+            ? console.warn("No pusiste un texto para invertir")
+            : console.info(cadena.split("").reverse().join(""))
+            }
+            
+           // invertirCadena("")
+           // invertirCadena("Hola Mundo")
+          //  invertirCadena("loren ipsum sarlanga")
+
+    /* ej 6*/
+    
+        const textoEnCadena = (cadena="", texto="")=>{
+            if(!cadena) return console.warn("No ingresaste texto largo")
+            if(!texto) return console.warn("No ingresaste texto a evaluar")
+
+            let i = 0
+            contador = 0
+            while(i!== -1) {
+                i = cadena.indexOf(texto,i)
+                if (i !== -1){
+                    i++
+                    contador ++
+                }
+
+                
+
+
+            }
+            
+            return console.info(`La palabra ${texto} se repite ${contador} veces`)
+        }    
+
+        textoEnCadena("argentina campeon del mundo argentina campeon campeon campeon", "campeon")
+    </script>
+    
+</head>
+
+<body>
+    <h1> Javascript cap 36</h1>
+    
+</body>
+</html>

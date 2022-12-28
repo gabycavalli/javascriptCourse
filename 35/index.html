@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Programacion</title>
+    <script>
+        /*Ejercicio 1*/
+        /*Funcion declarada*/   
+        /*function contarCaracteres(cadena ="") {
+
+            if (!cadena){
+                console.warn("Cadena esta vacia");
+            } else {
+                console.info(`Cadena tiene "${cadena}" tiene ${cadena.length}  caracteres`)
+            }       
+            
+        }*/
+
+        /*funcion expresada*/
+        const contarCaracteres=(cadena ="")=>
+        (!cadena)? 
+        console.warn("Cadena esta vacia")
+        :console.info(`Cadena tiene "${cadena}" tiene ${cadena.length}  caracteres`)
+
+        //contarCaracteres();
+        //contarCaracteres("Aguante la Commodore 64");
+
+        /*Ejercicio 2*/
+        let cadena = "Commodore 64"
+        let longitud = 6
+        const recortarTexto=(cadena="", longitud=undefined)=>
+        (!cadena)
+            ?console.info("No ingresaste Cadena")
+            :(longitud === undefined)
+                ?console.warn("No ingresaste longitud")
+                :console.info(cadena.slice(0,longitud))
+
+        //recortarTexto("Aristicrasia",4)
+        //recortarTexto()
+        //recortarTexto(cadena,longitud)
+
+        /*Ejercicio 3*/
+        const cadenaArreglo = (cadena = "", separador = undefined)=>
+        (!cadena)
+            ?console.info("No ingresaste Cadena")
+            :(separador === undefined)
+            ?console.warn("no ingresaste separador")
+            :console.info(cadena.split(separador))
+
+            //cadenaArreglo("prueba Lorem Ipsum", " ")
+            //cadenaArreglo("Ene,feb,mar,abr,may,jun", ",")
+            //cadenaArreglo("", "-")
+
+        /*Ejercicio 4*/
+
+        const repetirTexto = (texto = "", veces = undefined)=> {
+
+            if(!texto) return console.warn("No ingresaste texto");
+
+            if(veces === undefined) return console.warn("No ingresaste el numero a repetir el texto");
+
+            if(veces === 0) return console.error("Veces no puede ser 0");
+
+            if(Math.sign(veces) === -1) return console.error("Veces no puede ser negativo");
+
+            for(let i = 1;i<=veces;i++){
+        
+                console.info(`${texto},${i}`)
+            } 
+
+        }
+
+            repetirTexto("hola mundo", 3)
+            repetirTexto("hola mundo", 0)
+            repetirTexto("", 3)
+            repetirTexto("hola mundo")
+
+
+        
+       
+        
+        
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio de programacion</h1>
+
+</body>
+</html>
